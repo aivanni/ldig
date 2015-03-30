@@ -1,9 +1,25 @@
 ldig (Language Detection with Infinity Gram)
 ======================
 
-
 This is a prototype of language detection for short message service (twitter).
 with 99.1% accuracy for 17 languages
+
+About this fork
+---------------
+
+In this fork we just add some conveniences to enable the usage of this as
+a library in python programs.
+
+Changes include an updated `.gitignore` so that it ignores unpacked models,
+`__init__.py` file so that it can be treated as a module, added
+a `ldig_standalone.py` file with a convenient class to detect language on text
+and not on files.
+
+The `c++` is the main branch, treat that one as `master`. I haven't changed
+this to mimic the original repository.
+
+All real work was done by the author of the original, Nakatani Shuyo / Cybozu
+Labs Inc. under a MIT License (see below or at https://github.com/shuyo/ldig)
 
 
 Usage
@@ -11,6 +27,8 @@ Usage
 
 1. Extract model directory
     tar xf models/[select model archive]
+
+Fork note: The permissions of those archived models are wrong, `chmod` them so that you can read them.
 
 2. Detect
     ldig.py -m [model directory] [text data file]
@@ -27,7 +45,7 @@ As input data, Each tweet is one line in text file as the below format.
 It is also optional as metadata.
 (ldig doesn't use metadata and label for detection, of course :D)
 
-The output data of lidg is as the below.
+The output data of ldig is as the below.
 
     [correct label]\t[detected label]\t[original metadata and text]
 
