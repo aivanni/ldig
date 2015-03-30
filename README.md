@@ -15,8 +15,9 @@ Changes include an updated `.gitignore` so that it ignores unpacked models,
 a `ldig_standalone.py` file with a convenient class to detect language on text
 and not on files.
 
-The `c++` is the main branch, treat that one as `master`. I haven't changed
-this to mimic the original repository.
+The original `c++` branch, is merged with the original `master` for convenience
+too, since it takes away nothing from the python point of view, yet adds an
+extra `C++` version.
 
 All real work was done by the author of the original, Nakatani Shuyo / Cybozu
 Labs Inc. under a MIT License (see below or at https://github.com/shuyo/ldig)
