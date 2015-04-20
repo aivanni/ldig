@@ -13,23 +13,22 @@ a library in python programs.
 Changes include an updated `.gitignore` so that it ignores unpacked models,
 `__init__.py` file so that it can be treated as a module, added
 a `ldig_standalone.py` file with a convenient class to detect language on text
-and not on files.
+and not on files, updated model file permissions and a `setup.py` to install it
+easily.
 
 The original `c++` branch, is merged with the original `master` for convenience
 too, since it takes away nothing from the python point of view, yet adds an
 extra `C++` version.
 
 All real work was done by the author of the original, Nakatani Shuyo / Cybozu
-Labs Inc. under a MIT License (see below or at https://github.com/shuyo/ldig)
+Labs Inc. under a MIT License (see below or at https://github.com/shuyo/ldig).
 
 
 Usage
 ------
 
 1. Extract model directory
-    tar xf models/[select model archive]
-
-Fork note: The permissions of those archived models are wrong, `chmod` them so that you can read them.
+    tar xvzf models/[select model archive]
 
 2. Detect
     ldig.py -m [model directory] [text data file]
