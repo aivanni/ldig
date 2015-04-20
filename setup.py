@@ -11,7 +11,6 @@ setup(
     description='This is a prototype of language detection for short message'
     ' service (twitter). With 99.1% accuracy for 17 languages',
     packages=['ldig'],
-    package_data={'ldig': ['static/', 'maxsubst/', 'models/']},
     include_package_data=True,
     zip_safe=False,
     platforms='any',
